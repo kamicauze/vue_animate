@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
+import store from './store'
+import Velocity from 'velocity-animate'
+
 
 Vue.config.productionTip = false
-
+Vue.use(Velocity)
 new Vue({
-  render: h => h(App),
+  store,
+  render: h => h(App)
 }).$mount('#app')
